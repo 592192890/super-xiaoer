@@ -1,0 +1,176 @@
+//自定义全局css
+.g-fl {
+    float: left
+}
+
+.g-fr {
+    float: right
+}
+
+//重置elementUI的样式
+.el-menu-item.is-active {
+    color: #33bbab;
+}
+
+.el-pager li.active {
+    border-color: #33bbab;
+    background-color: #33bbab;
+}
+
+.el-menu-item {
+    min-width: 180px !important
+}
+
+//下拉箭头
+.el-icon-arrow-down:before {
+    color: #666;
+}
+
+//el-col-x设置最小宽度
+@for $i from 1 through 24 {
+    .el-col-#{$i} {
+        min-width: 40px * $i;
+    }
+}
+
+//按钮(搜索按钮都是使用默认的按钮格式)
+.el-button.el-button--primary {
+    background-color: #57a9e8;
+    border: none;
+}
+
+//分页组件样式重写
+.ui-table {
+    .el-pagination {
+        .el-pagination__total {
+            min-width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+        .btn-prev {
+            border: 1px solid rgb(209, 219, 229);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 20px;
+        }
+        .btn-next {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 10px;
+            border: 1px solid rgb(209, 219, 229)!important;
+        }
+        .el-pager {
+            li {
+                margin-left: 10px;
+                min-width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid rgb(209, 219, 229)!important;
+                color: #33445a;
+                &.el-icon-more {
+                    border: none!important;
+                }
+                &.active {
+                    background-color: #fff;
+                    color: #33bbab;
+                }
+            }
+        }
+    }
+    .el-pagination__sizes {
+        height: 40px;
+        line-height: 40px;
+        .el-select .el-input input {
+            height: 40px;
+        }
+    }
+    .el-pagination__jump {
+        height: 40px;
+        line-height: 40px;
+        .el-pagination__editor {
+            line-height: 28px;
+        }
+    }
+}
+
+//表格样式重写
+.ui-table {
+    .el-table {
+        border: none;
+        &:before {
+            height: 0px;
+        }
+        .el-table__header-wrapper {
+            th {
+                border: none;
+                .cell {
+                    background-color: #fff;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #999999;
+                }
+            }
+        }
+        .el-table__body-wrapper {
+            .el-table__row {
+                border-top: 5px solid #f2f3f7;
+                border-bottom: 5px solid #f2f3f7;
+            }
+        }
+    }
+}
+
+.bd-right .el-col-24 {
+    min-width: 730px;
+}
+
+// 图片上传，缩小版
+.el-upload-fixmin {
+    height: 38px;
+    &.inline-block {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .el-upload--picture-card,
+    .el-upload-list--picture-card .el-upload-list__item {
+        position: relative;
+        width: 38px;
+        height: 38px;
+    }
+    .el-upload--picture-card i {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        font-size: 22px;
+    }
+    .el-upload {
+        border: 1px dashed #8c939d;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    .el-upload:hover {
+        border-color: #20a0ff;
+    }
+    .uploader-icon {
+        font-size: 22px;
+        color: #8c939d;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+    }
+    .uploader-img {
+        width: 36px;
+        height: 36px;
+        display: block;
+    }
+}
+
+// 表格内验证不通过时不能显示错误信息
+.validate-table-error {
+    padding: 18px 0
+}
